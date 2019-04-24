@@ -1,20 +1,14 @@
 # HowlerMonkey
 
-HowlerMonkey allows user to create a lightweight Push-Service that powered by Server-sent Events (SSE).
+HowlerMonkey allows users to create a lightweight Push-Service that powered by Server-sent Events (SSE).
 
 ## Server-sent Events
-Mozilla MDN Web Docs has an easy-to-understand explaination about SSE:
-> Traditionally, a web page has to send a request to the server to receive new data; 
-that is, the page requests data from the server. 
-With server-sent events (SSE), it's possible for a server to send new data to a web page at any time, 
-by pushing messages to the web page. These incoming messages can be treated as Events + data inside 
-the web page.
+Mozilla MDN Web Docs have an easy-to-understand explanation about SSE:
+
+> Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events (SSE), it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as Events + data inside the web page.
 
 ## Why SSE OVER WebSockets
-Many use WebSockets due to its capability of bi-directional and full-duplex communication. However,
-you do not always need establish a bi-directional communication. A typical example is an email or feed 
-push service. Since my initial idea is to develop a lightweight HTTP Push-Service, SSE becomes my natural 
-choice.
+Many use WebSockets due to its capability of bi-directional and full-duplex communication. However, you do not always need to establish bi-directional communication. A typical example is an email or feed push service. Since my initial idea is to develop a lightweight HTTP Push-Service, SSE becomes my natural choice.
 
 ## Acknowledgement
 This project modifies Kyle L. Jensen's codes in his 
@@ -30,7 +24,7 @@ go get github.com/iamharvey/HowlerMonkey@latest
 ```
 
 ### Start A Server
-A SSE service can be considered as 'broker'. You can simple create a broker using `NewBroker()` 
+An SSE service can be considered as 'broker'. You can simply create a broker using `NewBroker()` 
 and wrap it up as a HTTP server.
 ```$xslt
     ...
@@ -88,5 +82,5 @@ http server.
 
 
 ## License (Unlicense)
-Since Kyle makes his codes an unlicense piece. I retain his choice of 
-[UNLICENSED](https://github.com/iamharvey/HowlerMonkey/blob/master/LICENSE) for this modified version.
+Since Kyle makes his codes UNLICENSE. I retain his choice of 
+[UNLICENSED](https://github.com/iamharvey/HowlerMonkey/blob/master/LICENSE) for this modified version too.
