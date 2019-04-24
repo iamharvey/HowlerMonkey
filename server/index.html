@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HowlerMonkey Test Server</title>
+    <style>
+        pre code {
+            background-color: #eee;
+            border: 1px solid #999;
+            display: block;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>HowlerMonkey Test Server</h1>
+<h3>What is HowlerMonkey?</h3>
+<p>
+    HowlerMonkey is an event server embraces server-sent event (SSE) technology. It allows user to send data to
+    connected clients without establishing a WebSocket.
+</p>
+
+<h3>How to get events?</h3>
+<p>Add the following JS codes into your HTML page:</p>
+<pre>
+  <code>
+  &lt;script&gt;
+    if(typeof(EventSource) !== "undefined") {
+        var source = new EventSource("http://localhost:5678/events");
+        source.onmessage = function(event) {
+            document.getElementById("events").innerHTML +=  (Date() + " " + event.data + "&lt;br&gt;");
+        };
+    } else {
+        document.getElementById("events").innerHTML = "Your browser does not support server-sent events.";
+    }
+  &lt;\script&gt;
+  </code>
+</pre>
+<hr>
+<h3>Received Events:</h3>
+<div id="events"></div>
+<script>
+    if(typeof(EventSource) !== "undefined") {
+        var source = new EventSource("http://localhost:5678/events");
+        source.onmessage = function(event) {
+            document.getElementById("events").innerHTML +=  (Date() + " " + event.data + "<br>");
+        };
+    } else {
+        document.getElementById("events").innerHTML = "Your browser does not support server-sent events.";
+    }
+</script>
+</body>
+</html>
