@@ -20,7 +20,7 @@ choice.
 This project modifies Kyle L. Jensen's codes in his 
 [golang-html5-sse-example](https://github.com/kljensen/golang-html5-sse-example), which is based on 
 [Leroy Campbell's SSE example in Go](https://gist.github.com/artisonian/3836281) and 
-[the HTML5Rocks SSE tutorial](http://www.html5rocks.com/en/tutorials/eventsource/basics/). 
+[the HTML5Rocks SSE tutorial](http://www.html5rocks.com/en/tutorials/eventsource/basics/). Many credits should go to Kyle and Leroy.
 
 ## How-To
 
